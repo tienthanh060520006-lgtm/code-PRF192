@@ -2,16 +2,16 @@
 
 int main() {
     float n;
-    int PhanNguyen;
-    float PhanThuc;
+    int phanNguyen;
+    float phanThuc;
 
     printf("Nhap so thuc: ");
     scanf("%f", &n); 
 
-    PhanNguyen = (int)n;
-    PhanThuc = n - PhanNguyen;
+    phanNguyen = (int)n;
+    phanThuc = n - phanNguyen;
 	printf("Gia tri da nhap: %.4f\n", n);
-    printf("Phan nguyen la: %d\n", PhanNguyen);
-    printf("Phan thuc la: %.4f\n", PhanThuc);
+    printf("Phan nguyen la: %d\n", phanNguyen);
+    printf("Phan thuc la: %.4f\n", phanThuc);
     return 0;
 }
