@@ -8,10 +8,10 @@ int main() {
     if (sokwh < 100) {
         money = sokwh * 950;
     } 
-    else if (sokwh >= 100 && sokwh < 150) {
+    else if (sokwh > 100 && sokwh < 150) {
         money = sokwh * 1250;
     } 
-    else if (sokwh >= 150 && sokwh < 200) {
+    else if (sokwh > 150 && sokwh < 200) {
         money = sokwh * 1350;
     } 
     else {
