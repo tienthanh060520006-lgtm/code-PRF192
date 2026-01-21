@@ -3,7 +3,7 @@
 int main() {
     int a, b;
     char pt;
-
+fflush(stdin);
     printf("Nhap hai so a,b: ");
     scanf("%d,%d", &a, &b);
     printf("Nhap phep toan: ");
