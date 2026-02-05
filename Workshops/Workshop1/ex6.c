@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 int main() {
     float cc, gk, ck, tong;
     char rank;
