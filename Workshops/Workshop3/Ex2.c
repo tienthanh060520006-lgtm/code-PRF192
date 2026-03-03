@@ -1,20 +1,29 @@
 #include <stdio.h>
+void calculate_taxi_fare(float distance) {
+    float total_fare = 0;
+    if (distance <= 0) {
+        printf("So km khong hop le!\n");
+        return;
+    }
+    else if (distance <= 1) {
+        total_fare = distance * 15000;
+    } 
+    else if (distance <= 30) {
+        total_fare = (1 * 15000) + (distance - 1) * 12000;
+    } 
+    else {
+        total_fare = (1 * 15000) + (29 * 12000) + (distance - 30) * 10000;
+    }
+
+    printf("Quang duong di duoc: %.2f km\n", distance);
+    printf("Tong tien cuoc taxi: %.0f dong\n", total_fare);
+}
+
 int main() {
-    int n;
-    int kq = 0;
-    n = 1; 
-   do {
-        printf("Nhap so nguyen duong: ");
-        if (scanf("%d", &n) != 1) {
-            printf("Vui long nhap so nguyen duong!\n\n");
-            break;
-        }
-        if (n > 0) {
-            kq = kq + n; 
-        }
-        else if (n<0)
-        printf("Vui long nhap so nguyen duong!\n");
-    } while (n != 0);
-    printf("Tong cac so nguyen duong la: %d\n", kq);
+    float km;
+    printf("Nhap so km : ");
+    scanf("%f", &km);
+    calculate_taxi_fare(km);
+
     return 0;
 }
