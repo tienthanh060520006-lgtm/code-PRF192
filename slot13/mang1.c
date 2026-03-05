@@ -8,8 +8,11 @@ void doubleX2(int *p) {
 }
 void inputArr(int a[], int n) {
     for (int i = 0; i < n; i++) {
-        printf("Nhap a[%d]: ", i);
-        scanf("%d", &a[i]);
+    printf("Nhap a[%d]: ", i);
+      while (scanf("%d", &a[i]) != 1) {
+    printf("Loi! Vui long nhap lai so nguyen cho a[%d]: ", i);
+       while (getchar() != '\n');
+     }
     }
 }
 void outputArr(int a[], int n) {
@@ -37,18 +40,15 @@ int countPrimes(int a[], int n) {
     return count;
 }
 int main() {
-
     int x = 10;
     printf("Gia tri ban dau cua x = %d\n", x);
     doubleX2(&x); 
     printf("Gia tri x sau khi doubleX2 = %d\n", x);
-
     printf("---------------------------\n");
     int n;
     int a[100]; 
     printf("Nhap so luong phan tu n: ");
     scanf("%d", &n);
-
     if (n > 0 && n <= 100) {
         inputArr(a, n);
         outputArr(a, n);
