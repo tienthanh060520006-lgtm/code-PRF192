@@ -77,7 +77,6 @@ void removeFirst(int arr[], int *size) {
     }
     printf("Khong tim thay gia tri de xoa.\n");
 }
-
 void removeAll(int arr[], int *size) {
     int val, count = 0;
     printf("Nhap gia tri can xoa tat ca: ");
@@ -104,8 +103,6 @@ void printArray(int arr[], int size) {
     }
     printf("\n");
 }
-
-
 void printSorted(int arr[], int size, int ascending) {
     if (size == 0) {
         printf("Mang trong, khong co gi de in.\n");

@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+#include <ctype.h>
+
+int isPrime(int n) {
+    if (n < 2) return 0;
+    for (int i = 2; i <= sqrt(n); i++) {
+        if (n % i == 0) return 0;
+    }
+    return 1;
+}
+
+void displayPrimes(int arr[], int size) {
+    int found = 0;
+    for (int i = 0; i < size; i++) {
+        if (isPrime(arr[i])) {
+            printf("%d ", arr[i]);
+            found = 1;
+        }
+    }
+    
+    if (found == 0) {
+        printf("Not found");
+    }
+}
+
+int main() {
+    system("cls");
+    printf("INPUT:\n");
+    
+    // //INPUT - @STUDENT:ADD YOUR CODE FOR INPUT HERE:
+    int n;
+    if (scanf("%d", &n) != 1 || n <= 0) return 0;
+    
+    int a[n];
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    // Fixed Do not edit anything here.
+    printf("\nOUTPUT:\n");
+    
+    //@STUDENT: WRITE YOUR OUTPUT HERE:
+    displayPrimes(a, n);
+
+    //--FIXED PART - DO NOT EDIT ANY THINGS HERE
+    printf("\n");
+    system ("pause");
+    return(0);
+}
